@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telefonszamok_DAL_Konzol", "Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol.csproj", "{1F9F2068-8653-4123-9786-CD926E02B990}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telefonszamok_Konzol", "Telefonszamok_Konzol\Telefonszamok_Konzol.csproj", "{9D5F1AC2-C158-4066-9CBD-312C6B2702F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telefonszamok_WPF", "Telefonszamok_WPF\Telefonszamok_WPF.csproj", "{F4065F61-787B-4D8D-9DB8-A3EDE459DAC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F9F2068-8653-4123-9786-CD926E02B990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9F2068-8653-4123-9786-CD926E02B990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9F2068-8653-4123-9786-CD926E02B990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9F2068-8653-4123-9786-CD926E02B990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D5F1AC2-C158-4066-9CBD-312C6B2702F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D5F1AC2-C158-4066-9CBD-312C6B2702F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D5F1AC2-C158-4066-9CBD-312C6B2702F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D5F1AC2-C158-4066-9CBD-312C6B2702F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4065F61-787B-4D8D-9DB8-A3EDE459DAC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4065F61-787B-4D8D-9DB8-A3EDE459DAC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4065F61-787B-4D8D-9DB8-A3EDE459DAC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4065F61-787B-4D8D-9DB8-A3EDE459DAC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9774A24-0ED5-4F44-AA09-9D70E74DACD9}
+	EndGlobalSection
+EndGlobal
