@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="edmTelefonszamok.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="edmTelefonszamokStoreContainer">
+    <EntitySet Name="enSzemelyek" EntityType="edmTelefonszamok.Store.enSzemelyek" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="enTelefonszamok" EntityType="edmTelefonszamok.Store.enTelefonszamok" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="enHelysegSet" EntityType="edmTelefonszamok.Store.enHelysegSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="enSzemelyenTelefonszam" Association="edmTelefonszamok.Store.enSzemelyenTelefonszam">
+      <End Role="enSzemely" EntitySet="enSzemelyek" />
+      <End Role="enTelefonszam" EntitySet="enTelefonszamok" />
+    </AssociationSet>
+    <AssociationSet Name="enHelysegenSzemely" Association="edmTelefonszamok.Store.enHelysegenSzemely">
+      <End Role="enHelyseg" EntitySet="enHelysegSet" />
+      <End Role="enSzemely" EntitySet="enSzemelyek" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="enSzemelyek">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vezeteknev" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Utonev" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Lakcim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="enHelyseg_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="enTelefonszamok">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Szam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="enSzemely_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="enHelysegSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Irsz" Type="smallint" Nullable="false" />
+    <Property Name="Nev" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="enSzemelyenTelefonszam">
+    <End Role="enSzemely" Type="edmTelefonszamok.Store.enSzemelyek" Multiplicity="1" />
+    <End Role="enTelefonszam" Type="edmTelefonszamok.Store.enTelefonszamok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="enSzemely">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="enTelefonszam">
+        <PropertyRef Name="enSzemely_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="enHelysegenSzemely">
+    <End Role="enHelyseg" Type="edmTelefonszamok.Store.enHelysegSet" Multiplicity="1" />
+    <End Role="enSzemely" Type="edmTelefonszamok.Store.enSzemelyek" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="enHelyseg">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="enSzemely">
+        <PropertyRef Name="enHelyseg_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="edmTelefonszamok" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="cnTelefonszamok" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="enSzemelyek" EntityType="edmTelefonszamok.enSzemely" />
+    <EntitySet Name="enTelefonszamok" EntityType="edmTelefonszamok.enTelefonszam" />
+    <EntitySet Name="enHelysegSet" EntityType="edmTelefonszamok.enHelyseg" />
+    <AssociationSet Name="enSzemelyenTelefonszam" Association="edmTelefonszamok.enSzemelyenTelefonszam">
+      <End Role="enSzemely" EntitySet="enSzemelyek" />
+      <End Role="enTelefonszam" EntitySet="enTelefonszamok" />
+    </AssociationSet>
+    <AssociationSet Name="enHelysegenSzemely" Association="edmTelefonszamok.enHelysegenSzemely">
+      <End Role="enHelyseg" EntitySet="enHelysegSet" />
+      <End Role="enSzemely" EntitySet="enSzemelyek" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="enSzemely">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Vezeteknev" Type="String" Nullable="false" />
+    <Property Name="Utonev" Type="String" Nullable="false" />
+    <Property Name="Lakcim" Type="String" Nullable="false" />
+    <NavigationProperty Name="enTelefonszam" Relationship="edmTelefonszamok.enSzemelyenTelefonszam" FromRole="enSzemely" ToRole="enTelefonszam" />
+    <NavigationProperty Name="enHelyseg" Relationship="edmTelefonszamok.enHelysegenSzemely" FromRole="enSzemely" ToRole="enHelyseg" />
+  </EntityType>
+  <EntityType Name="enTelefonszam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Szam" Type="String" Nullable="false" />
+    <NavigationProperty Name="enSzemely" Relationship="edmTelefonszamok.enSzemelyenTelefonszam" FromRole="enTelefonszam" ToRole="enSzemely" />
+  </EntityType>
+  <EntityType Name="enHelyseg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Irsz" Type="Int16" Nullable="false" />
+    <Property Name="Nev" Type="String" Nullable="false" />
+    <NavigationProperty Name="enSzemely" Relationship="edmTelefonszamok.enHelysegenSzemely" FromRole="enHelyseg" ToRole="enSzemely" />
+  </EntityType>
+  <Association Name="enSzemelyenTelefonszam">
+    <End Type="edmTelefonszamok.enSzemely" Role="enSzemely" Multiplicity="1" />
+    <End Type="edmTelefonszamok.enTelefonszam" Role="enTelefonszam" Multiplicity="*" />
+  </Association>
+  <Association Name="enHelysegenSzemely">
+    <End Type="edmTelefonszamok.enHelyseg" Role="enHelyseg" Multiplicity="1" />
+    <End Type="edmTelefonszamok.enSzemely" Role="enSzemely" Multiplicity="*" />
+  </Association>
+</Schema>

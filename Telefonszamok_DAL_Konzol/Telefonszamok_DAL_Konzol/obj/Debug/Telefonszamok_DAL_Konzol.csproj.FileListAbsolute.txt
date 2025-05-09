@@ -1,0 +1,12 @@
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\bin\Debug\Telefonszamok_DAL_Konzol.dll.config
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\bin\Debug\Telefonszamok_DAL_Konzol.dll
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\bin\Debug\Telefonszamok_DAL_Konzol.pdb
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\bin\Debug\EntityFramework.dll
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\bin\Debug\EntityFramework.xml
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\obj\Debug\Telefonszamok_DAL_Konzol.csproj.AssemblyReference.cache
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\obj\Debug\Telefonszamok_DAL_Konzol.csproj.CoreCompileInputs.cache
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\obj\Debug\Telefonszamok_DAL_Konzol.csproj.CopyComplete
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\obj\Debug\Telefonszamok_DAL_Konzol.dll
+C:\Users\kobal\Desktop\EgyetemVizu\Telefonszamok_DAL_Konzol\Telefonszamok_DAL_Konzol\obj\Debug\Telefonszamok_DAL_Konzol.pdb
